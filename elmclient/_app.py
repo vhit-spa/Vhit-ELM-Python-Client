@@ -47,6 +47,9 @@ class _App( httpops.HttpOperations_Mixin, _validate.Validate_Mixin, _customScena
         self.hooks = []
         self.default_query_resource = None
 
+    def getServer(self):
+        return self.server
+
     def retrieve_cm_service_provider_xml(self):
         cm_service_provider_uri = rdfxml.xmlrdf_get_resource_uri(self.rootservices_xml,
                                                                      self.cmServiceProviders)

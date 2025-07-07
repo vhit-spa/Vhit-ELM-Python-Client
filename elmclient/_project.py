@@ -56,6 +56,9 @@ class _Project(oslcqueryapi._OSLCOperations_Mixin, _typesystem.Type_System_Mixin
             # the services.xml will be retrieved later when needed, because the config to retrieve it in isn't currently known there's no point retrieving it now
         return
 
+    def getServer(self):
+        return self.server
+
     def listmembers( self ):
         pass
 
